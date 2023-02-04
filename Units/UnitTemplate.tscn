@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Img/character_roundRed.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Img/character_handRed.png" type="Texture" id=2]
+
+[node name="UnitTemplate" type="RigidBody2D"]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+
+[node name="RootBody" type="Node2D" parent="CollisionShape"]
+
+[node name="LeftArm" type="Sprite" parent="CollisionShape/RootBody"]
+position = Vector2( 48, 0 )
+rotation = 0.0122813
+texture = ExtResource( 2 )
+
+[node name="Torso" type="Sprite" parent="CollisionShape/RootBody"]
+position = Vector2( 0, 56 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -53 )
+
+[node name="LeftArm" type="RemoteTransform2D" parent="CollisionShape/RootBody/Torso"]
+position = Vector2( 48, -56 )
+rotation = 0.0122813
+remote_path = NodePath("../../LeftArm")
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="LeftItem" type="Position2D" parent="CollisionShape/RootBody/Torso/LeftArm"]
+
+[node name="RightArm" type="Sprite" parent="CollisionShape/RootBody/Torso"]
+position = Vector2( -48, -56 )
+rotation = 0.000511509
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="RightItem" type="Position2D" parent="CollisionShape/RootBody/Torso/RightArm"]
