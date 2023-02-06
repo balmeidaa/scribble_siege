@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Img/character_roundRed.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Img/character_handRed.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Idle"
+
+[sub_resource type="Animation" id=2]
+resource_name = "WalkLeft"
+
+[sub_resource type="Animation" id=3]
+resource_name = "WalkRight"
 
 [node name="UnitTemplate" type="RigidBody2D"]
 
@@ -38,3 +47,21 @@ __meta__ = {
 }
 
 [node name="RightItem" type="Position2D" parent="CollisionShape/RootBody/Torso/RightArm"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Idle = SubResource( 1 )
+anims/WalkLeft = SubResource( 2 )
+anims/WalkRight = SubResource( 3 )
+
+[node name="AnimationTreePlayer" type="AnimationTreePlayer" parent="."]
+master_player = NodePath("../AnimationPlayer")
+data = {
+"active": false,
+"connections": [  ],
+"master": NodePath("../AnimationPlayer"),
+"nodes": [ {
+"id": "out",
+"position": Vector2( 43, 79 ),
+"type": "output"
+} ]
+}
