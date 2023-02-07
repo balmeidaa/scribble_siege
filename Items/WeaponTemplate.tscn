@@ -1,11 +1,18 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="WeaponTemplate" type="Node2D"]
+[ext_resource path="res://Items/WeaponScript.gd" type="Script" id=1]
+
+[node name="WeaponTemplate" type="KinematicBody2D"]
+collision_layer = 8
+collision_mask = 19
+script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="."]
 
-[node name="HittBox" type="Area2D" parent="."]
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
 
-[node name="CollisionShape" type="CollisionPolygon2D" parent="HittBox"]
+[node name="CollisionShape" type="CollisionPolygon2D" parent="HitBox"]

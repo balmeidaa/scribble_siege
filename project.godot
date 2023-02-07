@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "unit",
+"language": "GDScript",
+"path": "res://Units/UnitScript.gd"
+}, {
+"base": "Node",
+"class": "weapon",
+"language": "GDScript",
+"path": "res://Items/WeaponScript.gd"
+} ]
+_global_script_class_icons={
+"unit": "",
+"weapon": ""
+}
+
 [application]
 
 config/name="Scribble Siege"
@@ -16,6 +32,14 @@ config/icon="res://icon.png"
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[layer_names]
+
+2d_physics/layer_1="Ally"
+2d_physics/layer_2="Enemy"
+2d_physics/layer_3="Item"
+2d_physics/layer_4="Weapon"
+2d_physics/layer_5="Ground"
 
 [physics]
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/WeaponTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Img/weapon_hammer.png" type="Texture" id=2]
+
+[node name="WeaponHammer" instance=ExtResource( 1 )]
+damage_type = 1
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 0, -24 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape" parent="." index="1"]
+polygon = PoolVector2Array( -32, -72, -32, -40, -8, -40, -8, 32, 8, 32, 8, -40, 32, -40, 32, -72 )
+
+[node name="CollisionShape" parent="HitBox" index="0"]
+polygon = PoolVector2Array( -32, -80, -32, -40, 32, -40, 32, -80 )

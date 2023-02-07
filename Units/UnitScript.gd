@@ -1,7 +1,10 @@
 extends Node
 
+class_name unit
+
 var unit_name : String = ''
-var unit_type : String = '' #ranged/melee/magic
+var unit_type : String = '' #ranged/melee
+var unit_tier: String = '' # low,mid,high
 
 var resistance_vs : String = '' #slash, piercing, blunt, magic
 var weakness_vs : String = '' #slash, piercing, blunt, magic

@@ -48,6 +48,10 @@ __meta__ = {
 
 [node name="RightItem" type="Position2D" parent="CollisionShape/RootBody/Torso/RightArm"]
 
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Hurtbox"]
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle = SubResource( 1 )
 anims/WalkLeft = SubResource( 2 )
