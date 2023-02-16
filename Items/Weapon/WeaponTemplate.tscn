@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Items/WeaponScript.gd" type="Script" id=1]
+[ext_resource path="res://Items/Weapon/WeaponScript.gd" type="Script" id=1]
 
 [node name="WeaponTemplate" type="KinematicBody2D"]
 collision_layer = 8
@@ -16,3 +16,5 @@ collision_layer = 0
 collision_mask = 3
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="HitBox"]
+
+[node name="ProjectilePosition" type="Position2D" parent="."]

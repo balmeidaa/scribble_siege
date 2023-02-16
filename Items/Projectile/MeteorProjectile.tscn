@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Items/Projectile/ProjectileTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Img/effect_blast.png" type="Texture" id=2]
+[ext_resource path="res://Items/Projectile/MeteorProjectile.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 112.0
+
+[node name="MeteorProjectile" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="CollisionShape" parent="." index="0"]
+polygon = PoolVector2Array( -1, -38, 16, -32, 32, -16, 40, 0, 32, 16, 24, 24, 16, 32, -1, 35, -17, 33, -24, 24, -32, 16, -40, 0, -32, -16, -24, -30 )
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" parent="HitBox" index="0"]
+polygon = PoolVector2Array( -2, -37, 16, -32, 32, -16, 38, -1, 32, 16, 16, 32, 0, 37, -16, 32, -24, 24, -32, 16, -38, 2, -32, -16, -24, -28 )
+
+[node name="ExplosionArea" type="Area2D" parent="." index="3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionArea" index="0"]
+shape = SubResource( 1 )

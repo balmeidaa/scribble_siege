@@ -1,6 +1,6 @@
 extends Node
 
-class_name unit
+class_name Unitclass
 
 var unit_name : String = ''
 var unit_type : String = '' #ranged/melee

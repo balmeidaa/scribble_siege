@@ -9,19 +9,37 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "RigidBody2D",
+"class": "ArrowProjectileClass",
+"language": "GDScript",
+"path": "res://Items/Projectile/ArrowProjectile.gd"
+}, {
+"base": "RigidBody2D",
+"class": "MeteorProjectileClass",
+"language": "GDScript",
+"path": "res://Items/Projectile/MeteorProjectile.gd"
+}, {
+"base": "RigidBody2D",
+"class": "ProjectileClass",
+"language": "GDScript",
+"path": "res://Items/Projectile/ProjectileScript.gd"
+}, {
 "base": "Node",
-"class": "unit",
+"class": "Unitclass",
 "language": "GDScript",
 "path": "res://Units/UnitScript.gd"
 }, {
-"base": "Node",
-"class": "weapon",
+"base": "KinematicBody2D",
+"class": "WeaponClass",
 "language": "GDScript",
-"path": "res://Items/WeaponScript.gd"
+"path": "res://Items/Weapon/WeaponScript.gd"
 } ]
 _global_script_class_icons={
-"unit": "",
-"weapon": ""
+"ArrowProjectileClass": "",
+"MeteorProjectileClass": "",
+"ProjectileClass": "",
+"Unitclass": "",
+"WeaponClass": ""
 }
 
 [application]
