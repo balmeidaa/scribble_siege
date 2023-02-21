@@ -25,9 +25,14 @@ _global_script_classes=[ {
 "path": "res://Items/Projectile/ProjectileScript.gd"
 }, {
 "base": "Node",
-"class": "Unitclass",
+"class": "UnitFactory",
 "language": "GDScript",
-"path": "res://Units/UnitScript.gd"
+"path": "res://UnitFactory.gd"
+}, {
+"base": "Resource",
+"class": "UnitResourceClass",
+"language": "GDScript",
+"path": "res://Units/UnitResource.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "WeaponClass",
@@ -38,13 +43,15 @@ _global_script_class_icons={
 "ArrowProjectileClass": "",
 "MeteorProjectileClass": "",
 "ProjectileClass": "",
-"Unitclass": "",
+"UnitFactory": "",
+"UnitResourceClass": "",
 "WeaponClass": ""
 }
 
 [application]
 
 config/name="Scribble Siege"
+run/main_scene="res://Items/Weapon/WeaponBow.tscn"
 config/icon="res://icon.png"
 
 [gui]

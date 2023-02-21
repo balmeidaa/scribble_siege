@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Items/Projectile/ProjectileTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Img/item_arrow.png" type="Texture" id=2]
+[ext_resource path="res://Items/Projectile/ArrowProjectile.gd" type="Script" id=3]
 
 [node name="ArrowProjectile" instance=ExtResource( 1 )]
-script = null
+collision_layer = 0
+collision_mask = 19
+mass = 5.0
+gravity_scale = 5.0
+script = ExtResource( 3 )
+speed_launch = Vector2( 1000, -400 )
 
 [node name="CollisionShape" parent="." index="0"]
 polygon = PoolVector2Array( -48, -8, 48, -8, 48, 8, -48, 8 )

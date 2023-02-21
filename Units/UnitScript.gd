@@ -1,24 +1,10 @@
-extends Node
+extends RigidBody2D
 
-class_name Unitclass
-
-var unit_name : String = ''
-var unit_type : String = '' #ranged/melee
-var unit_tier: String = '' # low,mid,high
-
-var resistance_vs : String = '' #slash, piercing, blunt, magic
-var weakness_vs : String = '' #slash, piercing, blunt, magic
-
-var resistance_mult : float = 0.0  
-var weakness_mult : float = 0.0  
-
-var hit_points : float = 0.0
-var walking_speed: int = 0
-var running_speed: int = 0
-
-
+var unit_resource = load("res://Units/UnitResource.gd")
+onready var unit_data = unit_resource.new()
 
 func _ready():
-    pass # Replace with function body.
+    pass
 
-
+func loadUnitData():
+    pass    

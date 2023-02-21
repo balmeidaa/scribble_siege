@@ -31,12 +31,13 @@ var target_position : Vector2 = Vector2()
 onready var projectile_position : Position2D = $ProjectilePosition
 export(PackedScene) var projectile_scene = null
 
+
 func _ready():
     pass # Replace with function body.
 
-func _init(group_faction: String):    
-    self.group_faction = group_faction
-    
+func _init(faction: String):    
+    self.group_faction = faction
+
     
 func attack():
     match weapon_type:
@@ -60,10 +61,11 @@ func meleeAtack():
 
 func rangedAttack():
     if is_projectile_defined():
-        var projectile = projectile_scene.instance() 
+        var projectile = projectile_scene.instance(group_faction) 
         projectile.set_as_toplevel(true)
         projectile.transform = projectile_position.global_transform
         add_child(projectile)
+        projectile.launch()#pass direction later
         #add throwing code
        
         
