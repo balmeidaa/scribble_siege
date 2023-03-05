@@ -12,7 +12,7 @@ export var speed_launch: Vector2 = Vector2()
 var group_faction : String = '' 
 
 
-func _init(faction: String):
+func init_projectile(faction: String):
     self.group_faction = faction
 
 func _on_HitBox_body_entered(_body):

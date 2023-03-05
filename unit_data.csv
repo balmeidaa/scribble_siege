@@ -1,0 +1,7 @@
+unit_name,unit_type,unit_tier,resistance_vs,weakness_vs,resistance_mult,weakness_mult,hit_points,walking_speed,running_speed,special,right_item,left_item,body_texture,cost,description
+Archer,RANGED,BASIC,SLASH,SLASH,0.00,0.00,50,100,0,text,,bow,nil,0,text
+Man at Arms,MELEE,BASIC,SLASH,SLASH,0.00,0.00,60,100,0,text,nil,nil,nil,0,text
+Spearman,MELEE,MID,SLASH,SLASH,0.00,0.00,60,100,0,text,nil,nil,nil,0,text
+Axeman,MELEE,MID,SLASH,SLASH,0.00,0.00,70,100,0,text,nil,nil,nil,0,text
+Knight,MELEE,HIGH,SLASH,SLASH,0.00,0.00,90,100,0,text,nil,nil,nil,0,text
+Mage,RANGED,HIGH,SLASH,SLASH,0.00,0.00,40,100,0,text,nil,nil,nil,0,text

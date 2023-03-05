@@ -24,10 +24,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Items/Projectile/ProjectileScript.gd"
 }, {
-"base": "Node",
-"class": "UnitFactory",
+"base": "RigidBody2D",
+"class": "UnitClass",
 "language": "GDScript",
-"path": "res://UnitFactory.gd"
+"path": "res://Units/UnitScript.gd"
+}, {
+"base": "Node",
+"class": "UnitFactoryClass",
+"language": "GDScript",
+"path": "res://Units/UnitFactory.gd"
 }, {
 "base": "Resource",
 "class": "UnitResourceClass",
@@ -38,21 +43,33 @@ _global_script_classes=[ {
 "class": "WeaponClass",
 "language": "GDScript",
 "path": "res://Items/Weapon/WeaponScript.gd"
+}, {
+"base": "Node",
+"class": "WeaponFactoryClass",
+"language": "GDScript",
+"path": "res://Items/Weapon/WeaponFactory.gd"
 } ]
 _global_script_class_icons={
 "ArrowProjectileClass": "",
 "MeteorProjectileClass": "",
 "ProjectileClass": "",
-"UnitFactory": "",
+"UnitClass": "",
+"UnitFactoryClass": "",
 "UnitResourceClass": "",
-"WeaponClass": ""
+"WeaponClass": "",
+"WeaponFactoryClass": ""
 }
 
 [application]
 
 config/name="Scribble Siege"
-run/main_scene="res://Items/Weapon/WeaponBow.tscn"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+UnitFactory="*res://Units/UnitFactory.gd"
+WeaponFactory="*res://Items/Weapon/WeaponFactory.gd"
 
 [gui]
 

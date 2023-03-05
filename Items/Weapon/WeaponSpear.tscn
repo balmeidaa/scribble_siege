@@ -8,11 +8,15 @@ weapon_name = "spear"
 damage_type = 2
 
 [node name="Sprite" parent="." index="0"]
-position = Vector2( 0, -40 )
+position = Vector2( 0, 13.6 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape" parent="." index="1"]
+position = Vector2( 0, 53.6 )
 polygon = PoolVector2Array( -8, -152, -8, 80, 8, 80, 8, -152 )
+
+[node name="HitBox" parent="." index="2"]
+position = Vector2( 0, 53.6 )
 
 [node name="CollisionShape" parent="HitBox" index="0"]
 polygon = PoolVector2Array( 0, -160, -16, -128, 0, -104, 16, -128 )
